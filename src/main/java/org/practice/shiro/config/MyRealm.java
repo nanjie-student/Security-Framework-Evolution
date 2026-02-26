@@ -1,5 +1,6 @@
 package org.practice.shiro.config;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import org.apache.shiro.authc.AuthenticationException;
 import org.apache.shiro.authc.AuthenticationInfo;
 import org.apache.shiro.authc.AuthenticationToken;
@@ -35,9 +36,11 @@ public class MyRealm extends AuthorizingRealm {
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         //输入用户名密码
         String username = (String)token.getPrincipal();
-        System.out.println("输入的用户名是："+ username);
+        //System.out.println("输入的用户名是："+ username);
         // 从数据库中查找对应的密码
-        User user = userMapper.findByUsername(username);
+        // 使用 MP 内置的 LambdaQuery 构造器
+        User user = userMapper.selectOne(new LambdaQueryWrapper<User>()
+                .eq(User::getUsername, username));
         if(user == null){
             return null;
         }

@@ -1,0 +1,10 @@
+org/practice/AuthApplication.class
+org/practice/shiro/controller/loginController.class
+org/practice/shiro/config/ShiroConfig.class
+org/practice/common/entity/User.class
+org/practice/common/entity/Roles.class
+org/practice/common/mapper/UserMapper.class
+org/practice/common/mapper/PermissionMapper.class
+org/practice/session/controller/SessionController.class
+org/practice/common/entity/Permission.class
+org/practice/shiro/config/MyRealm.class

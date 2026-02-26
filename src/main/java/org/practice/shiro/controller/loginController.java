@@ -23,7 +23,7 @@ public class loginController {
     public Map<String, Object> login(@RequestBody Map<String, String> loginData) {
 
 
-        System.out.println(">>>>>>>>>> 接口被触发了！ <<<<<<<<<<");
+        //System.out.println(">>>>>>>>>> 接口被触发了！ <<<<<<<<<<");
         Map<String, Object> result = new HashMap<>();
 
         // 1. 获取 Subject
