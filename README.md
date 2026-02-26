@@ -4,7 +4,8 @@ Phase 1: Foundations
 Phase 2: Framework Integration (The Jakarta Challenge)
 
     Level 2: Apache Shiro (Manual Control) - Tackling dependency hell and manual SecurityManager wiring in Spring Boot 3.
-    Level 3: Spring Security (DSL) - Leveraging the power of the Spring ecosystem's declarative security.
+    
+
 
 Phase 3: Modern Architectures (In Progress)
     Level 4: Stateless JWT + Redis - Distributed authentication for decoupled systems.
